@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Juguetelandia</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.ico"
+    />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/jugueter.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+  </head>
+
+  <body>
+    <nav
+      style="background-color: #40a728"
+      class="navbar navbar-expand-lg navbar-light d-none d-lg-block"
+      id="jugueter_nav_top"
+    >
+      <div class="container text-light">
+        <div class="w-100 d-flex justify-content-between">
+          <div>
+            <i class="fa fa-envelope mx-2"></i>
+            <a
+              class="navbar-sm-brand text-light text-decoration-none"
+              href="mailto:info@juguetelandia.com"
+              >info@juguetelandia.com</a
+            >
+            <i class="fa fa-phone mx-2"></i>
+            <a
+              class="navbar-sm-brand text-light text-decoration-none"
+              href="tel:66295164"
+              >66295164</a
+            >
+          </div>
+          <div>
+            <a
+              class="text-light"
+              href="https://fb.com"
+              target="_blank"
+              rel="sponsored"
+              ><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i
+            ></a>
+            <a
+              class="text-light"
+              href="https://www.instagram.com/"
+              target="_blank"
+              ><i class="fab fa-instagram fa-sm fa-fw me-2"></i
+            ></a>
+            <a class="text-light" href="https://twitter.com/" target="_blank"
+              ><i class="fab fa-twitter fa-sm fa-fw me-2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a
+          class="navbar-brand text-success logo h1 align-self-center"
+          href="index.html"
+        >
+          Juguetelandia
+        </a>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#jugueter_main_nav"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between"
+          id="jugueter_main_nav"
+        >
+          <div class="flex-fill">
+            <ul
+              class="nav navbar-nav d-flex justify-content-between mx-lg-auto"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Nosostros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Tienda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="modal fade bg-white"
+      id="jugueter_search"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="w-100 pt-1 mb-5 text-right">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <form
+          action=""
+          method="get"
+          class="modal-content modal-body border-0 p-0"
+        >
+          <div class="input-group mb-2">
+            <input
+              type="text"
+              class="form-control"
+              id="inputModalSearch"
+              name="q"
+              placeholder="Search ..."
+            />
+            <button
+              type="submit"
+              class="input-group-text bg-success text-light"
+            >
+              <i class="fa fa-fw fa-search text-white"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div
+      id="template-mo-zay-hero-carousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-bs-target="#template-mo-zay-hero-carousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></li>
+        <li
+          data-bs-target="#template-mo-zay-hero-carousel"
+          data-bs-slide-to="1"
+        ></li>
+        <li
+          data-bs-target="#template-mo-zay-hero-carousel"
+          data-bs-slide-to="2"
+        ></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row p-5">
+              <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                <!-- <img class="img-fluid" src="./assets/img/banner_img_01.png" alt=""> -->
+                <img
+                  height="350"
+                  src="./assets/img/banner_img_01.png"
+                  alt="25%"
+                />
+              </div>
+              <div class="col-lg-6 mb-0 d-flex align-items-center">
+                <div class="text-align-left align-self-center">
+                  <h1 class="h1 text-success">Muñeco Woody</h1>
+                  <h3 class="h2">Los mejores juguetes para ti</h3>
+                  <p>
+                    Colección incluye Woody, Jessie, Buzz o Rex cada figura se
+                    vende por separado, sujeto a disponibilidad
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row p-5">
+              <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                <img class="img-fluid" src="./assets/img/mario.png" alt="" />
+              </div>
+              <div class="col-lg-6 mb-0 d-flex align-items-center">
+                <div class="text-align-left">
+                  <h1 class="h1">Juegos de video</h1>
+                  <h3 class="h2">Para todos los tipos de consola</h3>
+                  <p>
+                    Puedes explorar mundos fantásticos, luchar contra enemigos
+                    poderosos, resolver misterios o simplemente relajarte y
+                    disfrutar de una buena historia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row p-5">
+              <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                <img
+                height="350"                  
+                  src="./assets/img/mickey.png"
+                  alt="25%"
+                />
+              </div>
+              <div class="col-lg-6 mb-0 d-flex align-items-center">
+                <div class="text-align-left">
+                  <h1 class="h1">Peluches</h1>
+                  <h3 class="h2">Personajes de películas y series de televisión</h3>
+                  <p>
+                    Los peluches de personajes son una forma popular de juguetes
+                    para niños de todas las edades. Estos peluches representan a
+                    personajes de películas, series de televisión, + libros,
+                    videojuegos o incluso personajes de la vida real
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev text-decoration-none w-auto ps-3"
+        href="#template-mo-zay-hero-carousel"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </a>
+      <a
+        class="carousel-control-next text-decoration-none w-auto pe-3"
+        href="#template-mo-zay-hero-carousel"
+        role="button"
+        data-bs-slide="next"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+
+    <section class="container py-5">
+      <div class="row text-center pt-3">
+        <div class="col-lg-6 m-auto">
+          <h1 class="h1">Categorías del mes</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4 p-5 mt-3">
+          <a href="#"
+            ><img
+              src="./assets/img/category_img_01.png"
+              class="rounded-circle img-fluid border"
+          /></a>
+          <h5 class="text-center mt-3 mb-3">Juegos de mesa</h5>
+          <p class="text-center"><a class="btn btn-success">Comprar</a></p>
+        </div>
+        <div class="col-12 col-md-4 p-5 mt-3">
+          <a href="#"
+            ><img
+              src="./assets/img/category_img_02.png"
+              class="rounded-circle img-fluid border"
+          /></a>
+          <h2 class="h5 text-center mt-3 mb-3">Muñecas</h2>
+          <p class="text-center"><a class="btn btn-success">Comprar</a></p>
+        </div>
+        <div class="col-12 col-md-4 p-5 mt-3">
+          <a href="#"
+            ><img
+              src="./assets/img/category_img_03.png"
+              class="rounded-circle img-fluid border"
+          /></a>
+          <h2 class="h5 text-center mt-3 mb-3">Videojuegos</h2>
+          <p class="text-center"><a class="btn btn-success">Comprar</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light">
+      <div class="container py-5">
+        <div class="row text-center py-3">
+          <div class="col-lg-6 m-auto">
+            <h1 class="h1">Recien ingreso</h1>
+            <p>
+              Contamos con los juegos más recientes del mercado.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card h-100">
+              <a href="shop-single.html">
+                <img                           
+                  src="./assets/img/1.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </a>
+              <div class="card-body">
+                <ul class="list-unstyled d-flex justify-content-between">
+                  <li>
+                    <i class="text-warning fa fa-star"></i>
+                    <i class="text-warning fa fa-star"></i>
+                    <i class="text-warning fa fa-star"></i>
+                    <i class="text-muted fa fa-star"></i>
+                    <i class="text-muted fa fa-star"></i>
+                  </li>
+                  <li class="text-muted text-right">Q250.00</li>
+                </ul>
+                <a
+                  href="shop-single.html"
+                  class="h2 text-decoration-none text-dark"
+                  >Barbie</a
+                >
+                <p class="card-text">
+                  Las muñecas Barbie están disponibles en una amplia variedad de estilos y accesorios. 
+                  Las niñas pueden elegir entre muñecas que representan diferentes profesiones, intereses y actividades. 
+                  También hay muñecas que son parte de colecciones especiales, como Barbie princesas, Barbie doctoras, Barbie bailarinas, etc.
+                </p>
+                <p class="text-muted">Opiniones (24)</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card h-100">
+              <a href="shop-single.html">
+                <img
+                  src="./assets/img/2.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </a>
+              <div class="card-body">
+                <ul class="list-unstyled d-flex justify-content-between">
+                  <li>
+                    <i class="text-warning fa fa-star"></i>
+                    <i class="text-warning fa fa-star"></i>
+                    <i class="text-warning fa fa-star"></i>
+                    <i class="text-muted fa fa-star"></i>
+                    <i class="text-muted fa fa-star"></i>
+                  </li>
+                  <li class="text-muted text-right">Q450.00</li>
+                </ul>
+                <a
+                  href="shop-single.html"
+                  class="h2 text-decoration-none text-dark"
+                  >Mario</a
+                >
+                <p class="card-text">
+                  Los juguetes de Mario Bros son una excelente manera de que los niños de todas las edades disfruten de la diversión y la aventura de sus personajes favoritos. 
+                  Los juguetes están disponibles en una amplia variedad de estilos y precios, por lo que hay algo para todos.
+                </p>
+                <p class="text-muted">Opiniones (48)</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card h-100">
+              <a href="shop-single.html">
+                <img
+                  src="./assets/img/3.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </a>
+              <div class="card-body">
+                <ul class="list-unstyled d-flex justify-content-between">
+                  <li>
+                    <i class="text-warning fa fa-star"></i>
+                    <i class="text-warning fa fa-star"></i>
+                    <i class="text-warning fa fa-star"></i>
+                    <i class="text-warning fa fa-star"></i>
+                    <i class="text-warning fa fa-star"></i>
+                  </li>
+                  <li class="text-muted text-right">$360.00</li>
+                </ul>
+                <a
+                  href="shop-single.html"
+                  class="h2 text-decoration-none text-dark"
+                  >Street Fighter</a
+                >
+                <p class="card-text">
+                  Los juguetes de Street Fighter son una excelente manera para que los niños y adultos de todas las edades disfruten de la acción y la emoción de sus personajes favoritos. 
+                  Los juguetes están disponibles en una amplia variedad de estilos y precios, por lo que hay algo para todos.
+                </p>
+                <p class="text-muted">Opiniones (74)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark" id="tempaltemo_footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 pt-5">
+            <h2 class="h2 text-success border-bottom pb-3 border-light logo">
+              Juguetelandia
+            </h2>
+            <ul class="list-unstyled text-light footer-link-list">
+              <li>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                Ciudad Guatemala
+              </li>
+              <li>
+                <i class="fa fa-phone fa-fw"></i>
+                <a class="text-decoration-none" href="tel:010-020-0340"
+                  >502-66296184</a
+                >
+              </li>
+              <li>
+                <i class="fa fa-envelope fa-fw"></i>
+                <a class="text-decoration-none" href="mailto:info@company.com"
+                  >info@juguetelandia.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 pt-5">
+            <h2 class="h2 text-light border-bottom pb-3 border-light">
+              Productos
+            </h2>
+            <ul class="list-unstyled text-light footer-link-list">
+              <li><a class="text-decoration-none" href="#">Populares</a></li>
+              <li>
+                <a class="text-decoration-none" href="#">Juguetes para bebés</a>
+              </li>
+              <li><a class="text-decoration-none" href="#">Educativos</a></li>
+              <li>
+                <a class="text-decoration-none" href="#">Juegos de mesa</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#">Juguetes de peluche</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#"
+                  >Juguetes de manualidades</a
+                >
+              </li>
+              <li><a class="text-decoration-none" href="#">Muñecas</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 pt-5">
+            <h2 class="h2 text-light border-bottom pb-3 border-light">
+              Mas información
+            </h2>
+            <ul class="list-unstyled text-light footer-link-list">
+              <li><a class="text-decoration-none" href="#">Inicio</a></li>
+              <li>
+                <a class="text-decoration-none" href="#">Acerca de nosotros</a>
+              </li>
+              <li>
+                <a class="text-decoration-none" href="#">Nuetras ubicaciones</a>
+              </li>
+              <li><a class="text-decoration-none" href="#">Consultas</a></li>
+              <li><a class="text-decoration-none" href="#">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row text-light mb-4">
+          <div class="col-12 mb-3">
+            <div class="w-100 my-3 border-top border-light"></div>
+          </div>
+          <div class="col-auto me-auto">
+            <ul class="list-inline text-left footer-icons">
+              <li
+                class="list-inline-item border border-light rounded-circle text-center"
+              >
+                <a
+                  class="text-light text-decoration-none"
+                  target="_blank"
+                  href="http://facebook.com/"
+                  ><i class="fab fa-facebook-f fa-lg fa-fw"></i
+                ></a>
+              </li>
+              <li
+                class="list-inline-item border border-light rounded-circle text-center"
+              >
+                <a
+                  class="text-light text-decoration-none"
+                  target="_blank"
+                  href="https://www.instagram.com/"
+                  ><i class="fab fa-instagram fa-lg fa-fw"></i
+                ></a>
+              </li>
+              <li
+                class="list-inline-item border border-light rounded-circle text-center"
+              >
+                <a
+                  class="text-light text-decoration-none"
+                  target="_blank"
+                  href="https://twitter.com/"
+                  ><i class="fab fa-twitter fa-lg fa-fw"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-auto">
+            <label class="sr-only" for="subscribeEmail"
+              >Correo electrónico</label
+            >
+            <div class="input-group mb-2">
+              <input
+                type="text"
+                class="form-control bg-dark border-light"
+                id="subscribeEmail"
+                placeholder="Email"
+              />
+              <div class="input-group-text btn-success text-light">
+                Suscribete
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100 bg-black py-3">
+        <div class="container">
+          <div class="row pt-2">
+            <div class="col-12">
+              <p class="text-left text-light">
+                Copyright &copy; 2023 Juguetelandia | Diseñado por
+                <a rel="sponsored">Grupo 4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jugueter.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>

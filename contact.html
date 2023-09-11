@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Juguetelandiat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jugueter.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+ 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+</head>
+
+<body>
+  
+    <nav
+            style="background-color: #40a728"
+            class="navbar navbar-expand-lg navbar-light d-none d-lg-block" id="jugueter_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                </div>
+                <div>
+                    <a
+                      class="text-light"
+                      href="https://fb.com"
+                      target="_blank"
+                      rel="sponsored"
+                      ><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i
+                    ></a>
+                    <a
+                      class="text-light"
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      ><i class="fab fa-instagram fa-sm fa-fw me-2"></i
+                    ></a>
+                    <a class="text-light" href="https://twitter.com/" target="_blank"
+                      ><i class="fab fa-twitter fa-sm fa-fw me-2"></i
+                    ></a>
+                  </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                Juguetelandia
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#jugueter_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="jugueter_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+  
+    <div class="modal fade bg-white" id="jugueter_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+   
+    <div class="container-fluid bg-light py-5">
+        <div class="col-md-6 m-auto text-center">
+            <h1 class="h1">Contáctanos</h1>
+            <p>
+                Nuestro equipo de atención al cliente está disponible para ayudarte en todo lo que necesites. 
+                Estamos aquí para responder a tus preguntas, resolver tus problemas y ayudarte a encontrar el juguete perfecto para tu hijo.
+            </p>
+        </div>
+    </div>
+
+    <div id="mapid" style="width: 100%; height: 25px;"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <div class="col-md-6 m-auto text-center">    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12805.493701231444!2d-90.51288428226886!3d14.641811164682442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2843e0943e279%3A0x78074b414086076a!2sGuatemala%2C%20Guatemala%2C%20Guatemala!5e0!3m2!1sen!2sgt!4v1654348068728!5m2!1sen!2sgt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="container py-5">
+        <div class="row py-5">
+            <form class="col-md-9 m-auto" method="post" role="form">
+                <div class="row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputname">Nombre</label>
+                        <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nombre">
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputemail">Email</label>
+                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputsubject">Asunto</label>
+                    <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Asunto">
+                </div>
+                <div class="mb-3">
+                    <label for="inputmessage">Mensaje</label>
+                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Mensaje" rows="8"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col text-end mt-2">
+                        <button type="submit" class="btn btn-success btn-lg px-3">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 pt-5">
+              <h2 class="h2 text-success border-bottom pb-3 border-light logo">
+                Juguetelandia
+              </h2>
+              <ul class="list-unstyled text-light footer-link-list">
+                <li>
+                  <i class="fas fa-map-marker-alt fa-fw"></i>
+                  Ciudad Guatemala
+                </li>
+                <li>
+                  <i class="fa fa-phone fa-fw"></i>
+                  <a class="text-decoration-none" href="tel:010-020-0340"
+                    >502-66296184</a
+                  >
+                </li>
+                <li>
+                  <i class="fa fa-envelope fa-fw"></i>
+                  <a class="text-decoration-none" href="mailto:info@company.com"
+                    >info@juguetelandia.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+  
+            <div class="col-md-4 pt-5">
+              <h2 class="h2 text-light border-bottom pb-3 border-light">
+                Productos
+              </h2>
+              <ul class="list-unstyled text-light footer-link-list">
+                <li><a class="text-decoration-none" href="#">Populares</a></li>
+                <li>
+                  <a class="text-decoration-none" href="#">Juguetes para bebés</a>
+                </li>
+                <li><a class="text-decoration-none" href="#">Educativos</a></li>
+                <li>
+                  <a class="text-decoration-none" href="#">Juegos de mesa</a>
+                </li>
+                <li>
+                  <a class="text-decoration-none" href="#">Juguetes de peluche</a>
+                </li>
+                <li>
+                  <a class="text-decoration-none" href="#"
+                    >Juguetes de manualidades</a
+                  >
+                </li>
+                <li><a class="text-decoration-none" href="#">Muñecas</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-md-4 pt-5">
+              <h2 class="h2 text-light border-bottom pb-3 border-light">
+                Mas información
+              </h2>
+              <ul class="list-unstyled text-light footer-link-list">
+                <li><a class="text-decoration-none" href="#">Inicio</a></li>
+                <li>
+                  <a class="text-decoration-none" href="#">Acerca de nosotros</a>
+                </li>
+                <li>
+                  <a class="text-decoration-none" href="#">Nuetras ubicaciones</a>
+                </li>
+                <li><a class="text-decoration-none" href="#">Consultas</a></li>
+                <li><a class="text-decoration-none" href="#">Contacto</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="row text-light mb-4">
+            <div class="col-12 mb-3">
+              <div class="w-100 my-3 border-top border-light"></div>
+            </div>
+            <div class="col-auto me-auto">
+              <ul class="list-inline text-left footer-icons">
+                <li
+                  class="list-inline-item border border-light rounded-circle text-center"
+                >
+                  <a
+                    class="text-light text-decoration-none"
+                    target="_blank"
+                    href="http://facebook.com/"
+                    ><i class="fab fa-facebook-f fa-lg fa-fw"></i
+                  ></a>
+                </li>
+                <li
+                  class="list-inline-item border border-light rounded-circle text-center"
+                >
+                  <a
+                    class="text-light text-decoration-none"
+                    target="_blank"
+                    href="https://www.instagram.com/"
+                    ><i class="fab fa-instagram fa-lg fa-fw"></i
+                  ></a>
+                </li>
+                <li
+                  class="list-inline-item border border-light rounded-circle text-center"
+                >
+                  <a
+                    class="text-light text-decoration-none"
+                    target="_blank"
+                    href="https://twitter.com/"
+                    ><i class="fab fa-twitter fa-lg fa-fw"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-auto">
+              <label class="sr-only" for="subscribeEmail"
+                >Correo electrónico</label
+              >
+              <div class="input-group mb-2">
+                <input
+                  type="text"
+                  class="form-control bg-dark border-light"
+                  id="subscribeEmail"
+                  placeholder="Email"
+                />
+                <div class="input-group-text btn-success text-light">
+                  Suscribete
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="w-100 bg-black py-3">
+          <div class="container">
+            <div class="row pt-2">
+              <div class="col-12">
+                <p class="text-left text-light">
+                  Copyright &copy; 2023 Juguetelandia | Diseñado por
+                  <a rel="sponsored">Grupo 4</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jugueter.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
